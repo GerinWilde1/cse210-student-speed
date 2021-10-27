@@ -25,7 +25,7 @@ class Director:
 
     def _get_inputs(self):
 
-        #direction = 
+        return self._input_service.get_letter()
         pass
 
     def _do_updates(self):

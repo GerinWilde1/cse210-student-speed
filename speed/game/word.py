@@ -25,6 +25,7 @@ class Word(Actor):
 
     def move_words(self, direction):
         """Get the (rendomized)direction that the words move"""# maybe
+        
         pass
 
     def reset(self):
