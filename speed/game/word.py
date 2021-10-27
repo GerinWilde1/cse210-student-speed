@@ -9,6 +9,12 @@ class Word(Actor):
 
 
     def __init__(self):
+        """invokes the superclass, calls reset() when it's needed in order to pull a new word
+        points keep track of the total number of correct words typed"""
+        
+        super().__init__()#this makes sure that everything in the Act class is pulled over and is ready to be used.
+        self._points = 0
+        self.reset()
         pass
 
 
@@ -17,6 +23,10 @@ class Word(Actor):
 
         return self._points
 
+    def move_words(self, direction):
+        """Get the (rendomized)direction that the words move"""# maybe
+        pass
+
     def reset(self):
-        """moves the food to a new random location then it's picked up."""
+        """pulls new word and puts it in a random location and maybe sets it to start moving."""
         pass

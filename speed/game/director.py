@@ -24,6 +24,8 @@ class Director:
             sleep(constants.FRAME_LENGTH)
 
     def _get_inputs(self):
+
+        #direction = 
         pass
 
     def _do_updates(self):
