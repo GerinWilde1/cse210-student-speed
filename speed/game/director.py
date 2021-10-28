@@ -2,6 +2,7 @@ from time import sleep
 from game import constants
 from game.word import Word
 from game.score import Score
+from game.answer import Answer
 
 
 class Director:
@@ -14,6 +15,7 @@ class Director:
         self._keep_playing = True
         self._output_service = output_service
         self._score = Score()
+        self._answer = Answer()
 
     def start_game(self):
 
@@ -25,7 +27,10 @@ class Director:
 
     def _get_inputs(self):
 
-        return self._input_service.get_letter()
+        letter = self._input_service.get_letter()
+        self._answer
+
+
         pass
 
     def _do_updates(self):

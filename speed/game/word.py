@@ -1,3 +1,4 @@
+from os import X_OK
 import random
 from game import constants
 from game.actor import Actor
@@ -6,7 +7,7 @@ from game.point import Point
 # TODO: Define the Food class here
 class Word(Actor):
     """The food class. It keeps track of everything that the food is doing. moves it when needed and when collected helps to grow the snakes tail."""
-
+    
 
     def __init__(self):
         """invokes the superclass, calls reset() when it's needed in order to pull a new word
@@ -15,8 +16,8 @@ class Word(Actor):
         super().__init__()#this makes sure that everything in the Act class is pulled over and is ready to be used.
         self._points = 0
         self.reset()
-        flying_words = constants.LIBRARY
-
+        self.flying_words = constants.LIBRARY
+        self.list = []
 
 
     def get_points(self):
@@ -38,4 +39,10 @@ class Word(Actor):
 
     def reset(self):
         """pulls new word and puts it in a random location and maybe sets it to start moving."""
-        pass
+        self.points = 1
+        # for i in range(constants.STARTING_WORDS):
+        #     list.append(self.flying_words[random.randint(0, 10000)])
+        x = random.randint(2, constants.MAX_X)
+        y = random.randint(2, constants.MAX_Y)
+        position = Point(x, y)
+        self.set_position(position)
