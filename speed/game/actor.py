@@ -57,8 +57,7 @@ class Actor:
         """
         return self._velocity
     
-    def move_next(self):
-        pass
+
         
     
     def set_position(self, position):
