@@ -4,7 +4,7 @@ from game import constants
 from game.actor import Actor
 from game.point import Point
 
-# TODO: Define the Food class here
+# TODO: Define the Word class here
 class Word(Actor):
     """The food class. It keeps track of everything that the food is doing. moves it when needed and when collected helps to grow the snakes tail."""
     
