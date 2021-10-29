@@ -41,3 +41,4 @@ root                    (project root folder)
 ## Authors
 ---
 * # TODO: Add names and emails here
+Juan Figueroa - j22figueroa - Actor.py class
