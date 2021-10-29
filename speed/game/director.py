@@ -28,10 +28,10 @@ class Director:
     def _get_inputs(self):
 
         letter = self._input_service.get_letter()
-        self._answer
+        self._answer.update_text(letter)
 
 
-        pass
+        
 
     def _do_updates(self):
         pass
