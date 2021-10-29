@@ -6,7 +6,7 @@ from game.point import Point
 
 # TODO: Define the Word class here
 class Word(Actor):
-    """The food class. It keeps track of everything that the food is doing. moves it when needed and when collected helps to grow the snakes tail."""
+    """The Word class. It keeps track of everything that the Word is doing. moves it when needed and when collected helps to grow the scores."""
     
 
     def __init__(self):
