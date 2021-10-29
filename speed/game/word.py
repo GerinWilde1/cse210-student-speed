@@ -1,4 +1,4 @@
-from os import X_OK
+#from os import X_OK
 import random
 from game import constants
 from game.actor import Actor
