@@ -39,7 +39,7 @@ class Word(Actor):
         # position = Point(x, y)
         # self._position = position
 
-    def random_word(self):
+    def reset(self):
         """pulls new word and puts it in a random location and maybe sets it to start moving."""
         self.points = 1
         # for i in range(constants.STARTING_WORDS):
