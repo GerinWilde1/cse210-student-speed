@@ -18,6 +18,7 @@ class Word(Actor):
         self.reset()
         self.flying_words = constants.LIBRARY
         self.list = []
+        self._velocity = Point(0, -1)
 
 
     def get_points(self):
@@ -26,18 +27,19 @@ class Word(Actor):
         return self._points
 
     #def move_words(self, direction):
-    def move_next(self):
+    def move_words(self):
+        return self._velocity
                
-        x1 = self._position.get_x()
-        y1 = self._position.get_y()
-        x2 = self._velocity.get_x()
-        y2 = self._velocity.get_y()
-        x = 1 + (x1 + x2 - 1) % (constants.MAX_X - 1)
-        y = 1 + (y1 + y2 - 1) % (constants.MAX_Y - 1)
-        position = Point(x, y)
-        self._position = position
+        # x1 = self._position.get_x()
+        # y1 = self._position.get_y()
+        # x2 = self._velocity.get_x()
+        # y2 = self._velocity.get_y()
+        # x = 1 + (x1 + x2 - 1) % (constants.MAX_X - 1)
+        # y = 1 + (y1 + y2 - 1) % (constants.MAX_Y - 1)
+        # position = Point(x, y)
+        # self._position = position
 
-    def reset(self):
+    def random_word(self):
         """pulls new word and puts it in a random location and maybe sets it to start moving."""
         self.points = 1
         # for i in range(constants.STARTING_WORDS):
