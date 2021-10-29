@@ -57,8 +57,8 @@ class Word(Actor):
                 
         """
         self.points = 1
-        # for i in range(constants.STARTING_WORDS):
-        #     list.append(self.flying_words[random.randint(0, 10000)])
+        for i in range(constants.STARTING_WORDS):
+            list.append(self.flying_words[random.randint(0, 10000)])
         x = random.randint(2, constants.MAX_X)
         y = random.randint(2, constants.MAX_Y)
         position = Point(x, y)
