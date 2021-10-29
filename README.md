@@ -42,3 +42,5 @@ root                    (project root folder)
 ---
 * # TODO: Add names and emails here
 Juan Figueroa - j22figueroa - Actor.py class
+Gerald Quispe - qui17007@byui.edu - Word.py class
+Gerin Wilde - gerinw@byui.edu
