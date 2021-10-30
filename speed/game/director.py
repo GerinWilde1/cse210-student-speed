@@ -30,18 +30,30 @@ class Director:
         letter = self._input_service.get_letter()
         self._answer.update_text(letter)
 
+        for i in range(0, len(self._word.get_all())):
+            self._word.move_words(i, 1, 1)
+
 
         
 
     def _do_updates(self):
-        self._word.move_words()
-
-        if self._input_service.get_letter() == self._word.reset:
-            self._word.get_points()
+        
+        self.enter10()
 
     def _do_outputs(self):
         self._output_service.clear_screen()
-        self._output_service.draw_words(self._word)
-        self._output_service.draw_actors(self._score)
-        self._output_service.draw_actors(self._answer)
+        self._output_service.draw_actor(self._answer)
+        self._output_service.draw_actors(self._word.get_all())
+        self._output_service.draw_actor(self._score)
         self._output_service.flush_buffer()
+
+    def enter10(self):
+        word = self._answer.get_word()
+        
+        if '*' in word:
+            new_word = word[:-1]
+            #points = 5
+            points = self._word.word_check(new_word)
+            self._score.add_points(points)
+            self._answer.reset()
+            self._word._reset()
