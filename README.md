@@ -39,6 +39,10 @@ root                    (project root folder)
 * Asciimatics 1.12.0
 
 ## Authors
+Gerin Wilde - kinda had my hands in everything
+Juan Figueroa - Actor
+Gerald Quispe - Word
+Jose - Output
 ---
 * # TODO: Add names and emails here
 Juan Figueroa - j22figueroa - Actor.py class
