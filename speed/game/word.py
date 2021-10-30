@@ -63,3 +63,4 @@ class Word(Actor):
         y = random.randint(2, constants.MAX_Y)
         position = Point(x, y)
         self.set_position(position)
+ 
