@@ -9,7 +9,7 @@ class Word(Actor):
     """The Word class. It keeps track of everything that the Word is doing. moves it when needed and when collected helps to grow the scores."""
     
 
-    def __init__(self):mhgcv
+    def __init__(self):
         """invokes the superclass, calls reset() when it's needed in order to pull a new word
         points keep track of the total number of correct words typed
         
