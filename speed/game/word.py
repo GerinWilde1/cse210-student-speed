@@ -25,7 +25,7 @@ class Word(Actor):
         constants.LIBRARY = open(PATH + "/words.txt").read().splitlines()
         self.flying_words = constants.LIBRARY
         self._list = []
-        self._velocity = Point(0, -1)
+        self._velocity = Point(random.randint(-1, 1), random.randint(-1, 1))
 
 
     def get_points(self):

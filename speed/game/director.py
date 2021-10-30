@@ -34,8 +34,13 @@ class Director:
         
 
     def _do_updates(self):
-        pass
+        self._word.move_words()
+
+        if self._input_service.get_letter() == self._word.list:
+            self._word.get_points()
 
     def _do_outputs(self):
-
-        pass
+        self._output_service.clear_screen()
+        self._output_service.draw_actor(self._word)
+        self._output_service.draw_actor(self._score)
+        self._output_service.flush_buffer()
