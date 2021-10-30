@@ -1,5 +1,6 @@
 import sys
-from game import constants, word
+from game import constants
+from game.word import Word
 from asciimatics.widgets import Frame
 
 class OutputService:
@@ -20,6 +21,7 @@ class OutputService:
             screen (Screen): An Asciimatics Screen.
         """
         self._screen = screen
+        self.word = Word
         
     def clear_screen(self):
         """Clears the Asciimatics buffer in preparation for the next rendering.
@@ -38,8 +40,8 @@ class OutputService:
             self (OutputService): An instance of OutputService.
             actor (Actor): The actor to render.
         """ 
-        text = word.list
-        position = word.get_position()
+        text = self.word.list
+        position = self.word.get_position()
         x = position.get_x()
         y = position.get_y()
         for i in list:

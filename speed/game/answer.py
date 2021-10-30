@@ -12,8 +12,8 @@ class Answer:
 
     def update_text(self, text):
         if text != "*":
-            self._text += 
-            self.buffer.set_text = self._text()
+            self._text += text
+            self._buffer.set_text = self._text()
         else:
             self._text = "-Buffer: "
             self._buffer.set_text()
