@@ -21,7 +21,7 @@ print(list)
 
 x = random.randint(2, constants.MAX_X)
 y = random.randint(2, constants.MAX_Y)
-postition = Point(x, y)
+# postition = Point(x, y)
 #self.set_position(postiion)
 print(x, y)
 

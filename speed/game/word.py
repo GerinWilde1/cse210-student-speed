@@ -24,9 +24,8 @@ class Word(Actor):
         PATH = os.path.dirname(os.path.abspath(__file__))
         constants.LIBRARY = open(PATH + "/words.txt").read().splitlines()
         self.flying_words = constants.LIBRARY
-        self._list = []
         self._velocity = Point(random.randint(-1, 1), random.randint(-1, 1))
-
+        self._list = []
 
     def get_points(self):
         """This helps to call _points whenever it is needed without changing the origional
@@ -58,15 +57,15 @@ class Word(Actor):
             self (Word): an instance of Word.
                 
         """
-        list = []
+        
         self.points = 1
         for i in range(constants.STARTING_WORDS):
-            list.append(constants.LIBRARY[random.randint(0, 10000)])
+            self._list.append(constants.LIBRARY[random.randint(0, 10000)])
         x = random.randint(2, constants.MAX_X)
         y = random.randint(2, constants.MAX_Y)
         position = Point(x, y)
         self.set_position(position)
 
-        for i in list:
+        for i in self._list:
             i = self.set_position(position)
  
