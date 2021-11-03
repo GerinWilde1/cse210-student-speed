@@ -48,3 +48,4 @@ Jose - Output
 Juan Figueroa - j22figueroa - Actor.py class
 Gerald Quispe - qui17007@byui.edu - Word.py class
 Gerin Wilde - gerinw@byui.edu
+Jose LeBaron - jalbertolebaron@gmail.com
